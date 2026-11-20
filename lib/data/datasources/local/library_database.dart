@@ -1,8 +1,7 @@
-import 'package:offline_music/data/models/song.dart';
 import 'package:path/path.dart' as path;
 import 'package:sqflite/sqflite.dart';
 
-
+import '../../models/song.dart';
 
 /// Gestiona la base de datos SQLite local para la biblioteca de música.
 class LibraryDatabase {
