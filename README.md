@@ -2,7 +2,7 @@
 
 Reproductor de música local **offline** para Android desarrollado con **Flutter (Dart)** y componentes nativos en **Kotlin** (`AndroidX Media3` / `ExoPlayer`, `MediaSessionService` y `MediaStore`).
 
-> **Estado del proyecto:** Reconstrucción limpia desde cero (fase de fundación). Las características arquitectónicas descritas abajo corresponden al diseño objetivo y se marcarán como implementadas únicamente tras su compilación y validación en dispositivo real.
+> **Estado del proyecto:** Reconstrucción limpia desde cero (en progreso). Las características arquitectónicas descritas abajo corresponden al diseño objetivo y se marcarán como implementadas únicamente tras su compilación y validación en dispositivo real.
 
 ---
 
@@ -53,6 +53,18 @@ offline_music/
 ├── .gitignore
 ├── README.md
 └── docs/
+│   └── decisions/
+│       └── 001-modelos-y-sqlite.md
+│── lib/
+│    └── data/
+│    ├── datasources/
+│    │   └── local/
+│    │       └── library_database.dart
+│    └── models/
+│          ├── play_mode.dart
+│          └── song.dart
 ```
+## Progreso de reconstrucción
+Meta 1 (actual): Modelo Song, enum PlayMode, base de datos SQLite (LibraryDatabase) y registro de decisión docs/decisions/001-modelos-y-sqlite.md.
 ## Licencia
 Pendiente de definir antes de la primera versión pública (v0.1.0).
