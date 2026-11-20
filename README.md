@@ -55,16 +55,32 @@ offline_music/
 └── docs/
 │   └── decisions/
 │       └── 001-modelos-y-sqlite.md
+        └── 002-permisos-y-log.md
+        └── 003-escaneo-y-sincronizacion-biblioteca.md
 │── lib/
+     ├── core/
+     │   └── log/
+     │       └── app_log.dart
 │    └── data/
-│    ├── datasources/
-│    │   └── local/
-│    │       └── library_database.dart
-│    └── models/
-│          ├── play_mode.dart
-│          └── song.dart
+          ├── datasources/
+          │   └── local/
+          │     └── library_database.dart
+          └── models/
+                ├── play_mode.dart
+                └── song.dart
+          └── permissions/
+                ├── media_permission_gateway.dart
+                └── permission_gateway.dart
+     └── services/
+            ├── library_service.dart
+            └── library_sync_service.dart
 ```
 ## Progreso de reconstrucción
 Meta 1 (actual): Modelo Song, enum PlayMode, base de datos SQLite (LibraryDatabase) y registro de decisión docs/decisions/001-modelos-y-sqlite.md.
+
+Meta 2 (actual): Utilidad de registro AppLog, contrato PermissionGateway, implementación MediaPermissionGateway y docs/decisions/002-permisos-y-log.md.
+
+Meta 3 (actual): Escaneo nativo LibraryService / NativeLibraryService, detección de cambios LibrarySyncService y docs/decisions/003-escaneo-y-sincronizacion-biblioteca.md.
+
 ## Licencia
 Pendiente de definir antes de la primera versión pública (v0.1.0).
