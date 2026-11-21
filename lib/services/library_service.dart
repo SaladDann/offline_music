@@ -4,17 +4,17 @@ import '../core/log/app_log.dart';
 
 /// Contrato de escaneo nativo de biblioteca de audio.
 abstract interface class LibraryService {
-  Future<List>> scan();
+  Future<List<Map<String, dynamic>>> scan();
 }
 
-/// Implementación de [LibraryService] mediante canal nativo de medios.
+/// Implementación de LibraryService mediante canal nativo de medios.
 class NativeLibraryService implements LibraryService {
   const NativeLibraryService();
 
   static const MethodChannel _channel = MethodChannel('offline_music/media');
 
   @override
-  Future<List>> scan() async {
+  Future<List<Map<String, dynamic>>> scan() async {
     AppLog.library('Iniciando escaneo nativo');
 
     try {
@@ -26,7 +26,8 @@ class NativeLibraryService implements LibraryService {
         );
       }
 
-      final songs = >[];
+      final List<Map<String, dynamic>> songs = [];
+
       for (final item in raw) {
         if (item is Map) {
           songs.add(Map<String, dynamic>.from(item));
