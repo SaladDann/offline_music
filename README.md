@@ -58,6 +58,8 @@ offline_music/
         └── 002-permisos-y-log.md
         └── 003-escaneo-y-sincronizacion-biblioteca.md
         └── 004-repositorio-biblioteca-y-artwork.md
+        └── 005-capa-reproduccion-y-puente-nativo.md
+
 │── lib/
      ├── core/
      │   └── log/
@@ -72,19 +74,34 @@ offline_music/
           └── permissions/
                 ├── media_permission_gateway.dart
                 └── permission_gateway.dart
+          └── playback/
+                ├── audio_player_service.dart
+                ├── native_audio_player_service.dart
+                ├── native_playback_service.dart
+                └── native_playback_state.dart
+                └── format_pipeline/
+                        ├── alac_cache.dart
+                        ├── alac_converter.dart
+                        ├── format_service.dart
+                        ├── preloader.dart
+                        └── source_loader.dart
      └── services/
             ├── library_service.dart
             └── library_sync_service.dart
             └── artwork_service.dart
 ```
 ## Progreso de reconstrucción
-Meta 1 (actual): Modelo Song, enum PlayMode, base de datos SQLite (LibraryDatabase) y registro de decisión docs/decisions/001-modelos-y-sqlite.md.
+Meta 1: Modelo Song, enum PlayMode, base de datos SQLite (LibraryDatabase) y registro de decisión docs/decisions/001-modelos-y-sqlite.md.
 
-Meta 2 (actual): Utilidad de registro AppLog, contrato PermissionGateway, implementación MediaPermissionGateway y docs/decisions/002-permisos-y-log.md.
+Meta 2: Utilidad de registro AppLog, contrato PermissionGateway, implementación MediaPermissionGateway y docs/decisions/002-permisos-y-log.md.
 
-Meta 3 (actual): Escaneo nativo LibraryService / NativeLibraryService, detección de cambios LibrarySyncService y docs/decisions/003-escaneo-y-sincronizacion-biblioteca.md.
+Meta 3: Escaneo nativo LibraryService / NativeLibraryService, detección de cambios LibrarySyncService y docs/decisions/003-escaneo-y-sincronizacion-biblioteca.md.
 
-Meta 4 (actual): Servicio de carátulas y color dominante ArtworkService (lib/services/artwork_service.dart) y docs/decisions/004-repositorio-biblioteca-y-artwork.md.
+Meta 4: Servicio de carátulas y color dominante ArtworkService (lib/services/artwork_service.dart) y docs/decisions/004-repositorio-biblioteca-y-artwork.md.
+
+Meta 5: Capa de reproducción (AudioPlayerService, NativePlaybackState, NativePlaybackService y NativeAudioPlayerService) y docs/decisions/005-capa-reproduccion-y-puente-nativo.md.
+
+Meta 6 (actual): Pipeline de formatos (AlacCache, AlacConverter, FormatService, Preloader, SourceLoader) y docs/decisions/006-format-pipeline-y-cache-alac.md.
 
 ## Licencia
 Pendiente de definir antes de la primera versión pública (v0.1.0).
