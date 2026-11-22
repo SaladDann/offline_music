@@ -19,10 +19,9 @@ class AlacConverter {
   AlacConverter({
     AlacCache? cache,
     MethodChannel? channel,
-    WavConversionInvoker? conversionInvoker,
+    this._conversionInvoker,
   }) : _cache = cache ?? AlacCache(),
-       _channel = channel ?? const MethodChannel(_channelName),
-       _conversionInvoker = conversionInvoker;
+       _channel = channel ?? const MethodChannel(_channelName);
 
   static const String _channelName = 'offline_music/media';
 

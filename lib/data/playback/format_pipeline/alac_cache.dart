@@ -7,12 +7,10 @@ import '../../../core/log/app_log.dart';
 /// Administra el directorio, validación, protección y limpieza LRU de WAV en caché.
 class AlacCache {
   AlacCache({
-    String? baseDirectoryPath,
-    int maxCacheBytes = _defaultMaxCacheBytes,
-    int minimumValidWavBytes = _defaultMinimumValidWavBytes,
-  }) : _baseDirectoryPath = baseDirectoryPath,
-       _maxCacheBytes = maxCacheBytes,
-       _minimumValidWavBytes = minimumValidWavBytes;
+    this._baseDirectoryPath,
+    this._maxCacheBytes = _defaultMaxCacheBytes,
+    this._minimumValidWavBytes = _defaultMinimumValidWavBytes,
+  });
 
   static const String cacheDirectoryName = 'offline_music_alac';
   static const int _defaultMaxCacheBytes = 256 * 1024 * 1024;

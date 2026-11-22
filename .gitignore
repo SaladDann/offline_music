@@ -1,47 +1,46 @@
-# Secrets & local environment files
-.env
-.env.*
-!.env.example
-!.env.template
-*.jks
-*.keystore
-key.properties
-google-services.json
+# Flutter / Dart generated files
+.dart_tool/
+.packages
+.pub/
+.pub-cache/
+.flutter-plugins
+.flutter-plugins-dependencies
 
-# Android / Gradle
-android/.gradle/
-android/captures/
-android/local.properties
-android/**/GeneratedPluginRegistrant.java
-android/**/GeneratedPluginRegistrant.m
-android/app/debug/
-android/app/profile/
-android/app/release/
-# NOTA: NO ignorar android/gradlew ni gradlew.bat (deben versionarse)
+# Build outputs
+build/
+**/build/
 
-# iOS / macOS
-ios/Pods/
-ios/.symlinks/
-ios/Flutter/.last_build_id
-ios/Flutter/App.framework
-ios/Flutter/Flutter.framework
-ios/Flutter/Flutter.podspec
-ios/Flutter/Generated.xcconfig
-ios/Flutter/ephemeral/
-ios/Flutter/app.flx
-ios/Flutter/app.zip
-ios/Flutter/flutter_assets/
-ios/Flutter/flutter_export_environment.sh
-ios/ServiceDefinitions.json
-ios/Runner/GeneratedPluginRegistrant.*
-ios/Runner.xcworkspace/xcuserdata/
-ios/Runner.xcodeproj/xcuserdata/
-*.xcuserstate
-macos/Pods/
-macos/.symlinks/
-macos/Flutter/GeneratedPluginRegistrant.swift
-macos/Flutter/ephemeral/
+# IDE
+.idea/
+*.iml
+.vscode/
 
-# FVM (si aplica)
-.fvm/
-# .fvmrc
+# Dart generated code
+*.g.dart
+*.freezed.dart
+
+# Gradle generated files
+.gradle/
+**/.gradle/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Flutter generated plugin registrants
+**/generated_plugin_registrant.*
+**/generated_plugins.cmake
+
+# Flutter generated files
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+build/
+**/build/
+
+# Gradle
+.gradle/
+**/.gradle/
